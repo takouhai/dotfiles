@@ -1,4 +1,4 @@
-name: "Build fishcrow flavor of NixOS on Ubuntu latest"
+name: "Build home-manager shell on Ubuntu latest"
 on:
   pull_request:
   push:
