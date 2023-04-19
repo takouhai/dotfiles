@@ -1,0 +1,33 @@
+#!/bin/bash
+
+mkdir -vp "$HOME/Utils"
+cd "$HOME/Utils"
+
+# update system using pacman
+echo "tacOS: updating your system"
+sudo pacman -Syu
+
+# install package manager
+git clone https://aur.archlinux.org/trizen.git
+cd trizen
+makepkg -si
+
+# install recommended packages
+echo "tacOS: installing prerequisites"
+trizen -S git bat lsd dog kitty neovim thefuck emacs-nativecomp neofetch
+
+# make all of the directories we need
+## verbosely, prompt just in case
+echo "tacOS: making all of the directories we need... \n"
+mkdir -vp "$HOME/.config/kitty"
+mkdir -vp "$HOME/.zsh"
+
+# link files using
+## ln -sfni
+echo "tacOS: linking all configuration files ~/.dotfiles"
+ln -sfni "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
+ln -sfni "$HOME/.dotfiles/.p10k.zsh" "$HOME/.p10k.zsh"
+ln -sfni "$HOME/.dotfiles/.doom.d/config.el" "$HOME/.doom.d/config.el"
+ln -sfni "$HOME/.dotfiles/.doom.d/init.el" "$HOME/.doom.d/init.el"
+ln -sfni "$HOME/.dotfiles/.doom.d/packages.el" "$HOME/.doom.d/packages.el"
+ln -sfni "$HOME/.dotfiles/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"

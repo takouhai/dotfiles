@@ -1,0 +1,55 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+window:
+  padding:
+    x: 10
+    y: 0
+  dynamic_padding: false
+  decorations: full
+  dynamic_title: true
+  opacity: 0.9
+  class:
+    instance: Alacritty
+    general: Alacritty
+  gtk_theme_variant: dark
+
+scrolling:
+  history: 69420
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+  size: 14
+draw_bold_text_with_bright_colors: true
+
+colors:
+  primary:
+    background: '#0b0d0f'
+    foreground: '#87d65e'
+
+  selection:
+    text: '#f8f8f2'
+    background: '#414d58'
+
+  normal:
+    black:   '#0b0d0f'
+    red:     '#ff9580'
+    green:   '#8aff80'
+    yellow:  '#ffff80'
+    blue:    '#9580ff'
+    magenta: '#ff80bf'
+    cyan:    '#80ffea'
+    white:   '#f8f8f2'
+
+  bright:
+    black:   '#0b0d0f'
+    red:     '#ffaa99'
+    green:   '#a2ff99'
+    yellow:  '#ffff99'
+    blue:    '#aa99ff'
+    magenta: '#ff99cc'
+    cyan:    '#99ffee'
+    white:   '#ffffff'
+
+cursor:
+  style: Beam
+  unfocused_hollow: true
+  thickness: 0.2

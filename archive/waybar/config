@@ -1,0 +1,94 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": [],
+    "modules-right": ["network", "pulseaudio", "tray", "idle_inhibitor", "cpu", "battery", "clock"],
+    "sway/mode": {
+        "format": " {}"
+    },
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "❤️",
+            "2": "💛",
+            "3": "💚",
+            "4": "💙",
+            "5": "💜",
+            "6": "💘",
+            "7": "💕",
+            "8": "💝",
+            "9": "💖",
+            "0": "🖤",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "disable-scroll": false
+    },
+    "sway/window": {
+        "max-length": 64,
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:  %I:%M %p }",
+        "format-alt": "{:  %a | %-m/%e/%Y}",
+        "format-alt-click": "click-left",
+        "tooltip-format": "{: %I:%M:%S | %A, %B %e, %Y}",
+        "tooltip": true
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "{usage}%  ",
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% ",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "interval": 2,
+        "format": "  {bandwidthUpBits} -   {bandwidthDownBits} ﳤ {icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["直"],
+            "ethernet": [""],
+            "disconnected": [""]
+        },
+        "on-click": "alacritty -e nmtui",
+    "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-alt": "{volume}% {icon}",
+        "format-alt-click": "click-right",
+        "format-muted": "ﱝ",
+        "format-icons": {
+            "phone": [" ", " ", " "],
+            "default": ["", "", ""]
+        },
+        "scroll-step": 10,
+        "on-click": "alacritty -e ncpamixer",
+        "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon} ",
+        "format-icons": {
+            "activated": "零",
+            "deactivated": "鈴"
+        },
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 22
+    }
+}

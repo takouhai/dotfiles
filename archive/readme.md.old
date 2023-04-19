@@ -1,0 +1,46 @@
+# taco's dotfiles
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-out-pants.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/compatibility-club-penguin.svg)](https://forthebadge.com)
+
+## overview
+
+hey what's up mtv welcome to my crib ✌️
+
+it's easier for me to throw these configuration files on github, clone,
+and install instead of losing them all the time when i reinstall a new distro
+or hop across machines, so enjoy them!
+
+here's what i'm currently running and what you'll probably need to install:
+
+## current loadout
+
+* **os**
+  * [arch linux](https://archlinux.org/), btw
+    * i use [trizen](https://github.com/trizen/trizen) as my package manager
+  * macos (for work)
+* **window manager(s)**
+  * [kde](https://wiki.archlinux.org/title/KDE) + [bismuth](https://github.com/Bismuth-Forge/bismuth) - tiling windows for kde! 
+* **terminal emulator**
+  * [kitty](https://sw.kovidgoyal.net/kitty/) - plays super nice with fonts!
+* **text editor**
+  * [doom emacs](https://github.com/doomemacs/doomemacs) - hacking on mars has never been easier! i install `emacs-nativecomp` from the aur since it's recommended.
+
+## things i usually install
+
+* `bat`: backwards compatible `cat` alternative
+* `lsd`: backwards compatible `ls` alternative
+* `dog`: backwards compatible `dig` alternative
+* `kitty`: modern terminal emulator
+* `neovim`: but soon you'll meet my new new text editor!
+* `tmatrix`: cool matrix thing it's cool ok
+* `thefuck`: only human.
+* `neofetch`: why elsse would i be running linux?
+
+## license
+
+they're under the [wtfpl](license.md), so do wtf you want with them. scripts i've found online should have a source attached or proper attribution. if they don't, [let me know](https://github.com/takouhai/dotfiles/issues/new).
+
+**any questions or problems?** [submit an issue!](https://github.com/takouhai/dotfiles/issues/new)
+

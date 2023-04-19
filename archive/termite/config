@@ -1,0 +1,53 @@
+# ====================
+#   _                      _ _
+#  | |                    (_) |
+#  | |_ ___ _ __ _ __ ___  _| |_ ___
+#  | __/ _ \ '__| '_ ` _ \| | __/ _ \
+#  | ||  __/ |  | | | | | | | ||  __/
+#   \__\___|_|  |_| |_| |_|_|\__\___|
+# ====================
+# author: @takouhai
+# license: mit
+# ====================
+
+[options]
+font = Source Code Pro 11
+cursor_shape = ibeam
+scrollback_lines = 10000
+scrollbar = off
+
+[colors]
+foreground = #87d65e
+2background = rgba(20, 20, 20, 0.8)
+
+# black
+color0  = #151515
+color8  = #828282
+
+# red
+color1  = #d74c4c
+color9  = #f086aa
+
+# green
+color2  = #87d65e
+color10 = #619844
+
+# yellow
+color3  = #fcf36e
+color11 = #f4eb6a
+
+# blue
+color4  = #aadde3
+color12 = #4faaf4
+
+# magenta
+color5  = #b87ac2
+color13 = #9575cd
+
+# cyan
+color6  = #4bb5c1
+color14 = #4bb5c1
+
+# white
+color7  = #ffffff
+color15 = #e2e2e5
