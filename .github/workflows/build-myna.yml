@@ -10,4 +10,4 @@ jobs:
     - uses: cachix/install-nix-action@v20
       with:
         github_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - run: nix shell nixpkgs#nixos-build -c nixos-build build --flake .#myna
+    - run: nix shell nixpkgs#nixos-rebuild -c nixos-rebuild build --flake .#myna

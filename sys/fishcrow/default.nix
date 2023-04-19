@@ -7,8 +7,6 @@
   imports = [
     # hardware configuration [install]
     ./hardware-configuration.nix
-    # environment manager [home-manager]
-    <home-manager/nixos>
   ];
 
   # bootloader [systemd-boot]
@@ -99,7 +97,6 @@
     ];
   };
 
-  home-manager.useGlobalPkgs = true;
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
