@@ -1,5 +1,8 @@
-# audio 
+# system 
 
-| program | purpose |
+core system configurations and components. 
+anything settings related that is able to be programmatically set goes here.
+
+| program | description |
 | --- | --- |
-| lmms | fl studio for open source nerds | 
+| | | 

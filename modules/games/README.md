@@ -1,5 +1,8 @@
-# audio 
+# games 
 
-| program | purpose |
+my horrible vice. my wallet cries every time there is a steam sale.
+anything that is playable goes here.
+
+| program | description |
 | --- | --- |
-| lmms | fl studio for open source nerds | 
+| steam | proprietary game marketplace and launcher | 
