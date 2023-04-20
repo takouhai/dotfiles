@@ -1,4 +1,6 @@
+---
 name: "Build home-manager shell on Ubuntu latest"
+
 on:
   pull_request:
     branches: 

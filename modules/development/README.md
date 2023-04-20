@@ -1,5 +1,17 @@
-# audio 
+# development
 
-| program | purpose |
-| --- | --- |
-| lmms | fl studio for open source nerds | 
+software for programming, coding, development, what have you.
+stuff that can't (or shouldn't) fit into the shell.
+divided into [shells](#shells) and [editors](#editors).
+
+## shells
+
+| shell | description |
+| ----- | ----------- |
+|       |             |
+
+## editors
+
+| program | description |
+| ------- | ----------- |
+|         |             |

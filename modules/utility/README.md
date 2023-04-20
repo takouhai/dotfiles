@@ -1,5 +1,5 @@
-# audio 
+# desktop
 
-| program | purpose |
-| --- | --- |
-| lmms | fl studio for open source nerds | 
+| program | description                     |
+| ------- | ------------------------------- |
+| lmms    | fl studio for open source nerds |
