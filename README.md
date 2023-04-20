@@ -17,41 +17,48 @@ hey what's up mtv welcome to my crib
 
 i made a nix configuration to manage my life.
 nix is pretty crazy, [you should check it out!](https://nixos.org/learn.html)
-declarative stuff is definitely the future. 
+declarative stuff is definitely the future.
 
 it's way easier to throw these up on github and just pull
 them down whenever i need them, so have them for free!
 you're welcome. i know. i'm too kind.
 
-all of these directories 
+all of these directories
 (and some of these files)
 are self-documented (hopefully).
 read the `README`s and you should have a good time.
-if you're not having a good time, 
+if you're not having a good time,
 want me to explain something better,
 or have feedback in general,
-let me know in the [issues](github.com/takouhai/dotfiles/issues). 
-your thoughts and opinions are welcome! 
+let me know in the [issues](github.com/takouhai/dotfiles/issues).
+your thoughts and opinions are welcome!
 
 ## table of contents
+
 here's what this repository currently holds:
 
 ### [home](home/)
-home configuration, powered by home-manager. 
+
+home configuration, powered by home-manager.
 
 ### [sys](sys/)
+
 my linux host configurations, powered by nixos and nix-darwin.
 
 ### [modules](modules/)
+
 bundles of packages for nixos, powered by my terrible nix scripts.
 
 ### [packages](packages/)
+
 packages for nix, powered by nixpkgs and nixos.
 
 ### [flake.nix](flake.nix)
+
 what makes this all happen, powered by nix flakes!
 
 ### [archive](archive/)
+
 the graveyard, powered by the neverending approach of time.
 
 ## install
@@ -59,12 +66,15 @@ the graveyard, powered by the neverending approach of time.
 you should probably [install nix or have nixos installed already](https://nixos.org/download.html).
 
 ### linux
+
 ```
 $ sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
-we install it as a daemon because daemons never stop.[^2] 
+
+we install it as a daemon because daemons never stop.[^2]
 
 ### macos
+
 ```
 $ sh <(curl -L https://nixos.org/nix/install)
 ```
@@ -74,6 +84,7 @@ from there, i clone this repository into my `~/.dotfiles` directory.
 ```
 $ git clone git@github.com:takouhai/dotfiles.git ~/.dotfiles
 ```
+
 after that, i run the update commands below in a shell with those commands available.
 usually i'm on a host with nix, so popping open a nix shell with the appropriate flake i need
 (usually just home-manager)
@@ -89,22 +100,24 @@ $ nix shell nixpkgs#home-manager
 once you start, you can't stop! seriously, help me.
 
 ### home
+
 ```
 $ home-manager switch --flake .#taco
 ```
 
 ### nixos
+
 ```
 $ sudo nixos-rebuild switch --flake .#
 ```
+
 should get you to the mountain, rock and roll.[^4]
-these re-build the appropriate setup based on what your inputted according to what the flake evaluates to 
+these re-build the appropriate setup based on what your inputted according to what the flake evaluates to
 and switches your home environment/operating system to it if it compiles successfully.
 
 the zsh shell has some provided shortcuts to update the current setup as you're using it.
 you can use `updateHome` and `updateNix` to automatically reload based on the config.
-you're really just running the above commands through these shortcuts, though. 
-
+you're really just running the above commands through these shortcuts, though.
 
 ```
 $ updateHome
@@ -112,9 +125,10 @@ $ updateNix
 $ updateChannel
 $ updateAll
 ```
+
 etc.
 
-take a look at [the source code](packages/zsh/default.nix) to see what's happening. 
+take a look at [the source code](packages/zsh/default.nix) to see what's happening.
 
 ## license
 
@@ -127,6 +141,8 @@ and link back to this repository to help others learn nix,
 but that's entirely optional!
 
 [^1]: [cereal isn't that great for you, actually.](https://www.webmd.com/a-to-z-guides/news/20221013/7-cereals-can-no-longer-claim-healthy-label)
-[^2]: > 'Daemons,' they call them. They perform action without user interaction. Monitoring, logging, notifications, primal urges, repressed memories, unconscious habits. They're always there, always active. You can try to be right, you can try to be good, you can try to make a difference. But it's all bullshit. 'Cause intentions are irrelevant. They don't drive us, daemons do. And me? I've got more than most.[^3]
+[^2]:
+    > 'Daemons,' they call them. They perform action without user interaction. Monitoring, logging, notifications, primal urges, repressed memories, unconscious habits. They're always there, always active. You can try to be right, you can try to be good, you can try to make a difference. But it's all bullshit. 'Cause intentions are irrelevant. They don't drive us, daemons do. And me? I've got more than most.[^3]
+
 [^3]: [`1.3_5-da3monsneverstop.caf`](https://www.youtube.com/watch?v=cPH53hOU4pA)
 [^4]: [rock and roll!](https://www.youtube.com/watch?v=eOofWzI3flA)
