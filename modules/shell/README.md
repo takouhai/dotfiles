@@ -24,7 +24,8 @@ i use these almost every day. some are drop-in replacements
 for old unix programs so you can add them as backwards
 compatible shortcuts in your shell. check out my
 [zsh config](../../programs/zsh/default.nix)
-for some commands i can't live without.
+for some commands i can't live without and i've actually
+hardcoded into my shell.
 
 | program | description |
 | --- | --- |
