@@ -24,5 +24,6 @@ jobs:
         uses: github/super-linter/slim@v5
         env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          DEFAULT_BRANCH: main
+          FILTER_REGEX_EXCLUDE: .*archive/.*
+          GITHUB_TOKEN: ${{ secrets.SUPER_PERSONAL_ACCESS_TOKEN }}

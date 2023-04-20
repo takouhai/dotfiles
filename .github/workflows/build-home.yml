@@ -1,3 +1,4 @@
+---
 name: "Build home-manager shell on Ubuntu latest"
 
 on:

@@ -1,3 +1,4 @@
+---
 name: "Build fishcrow flavor of NixOS on Ubuntu latest"
 
 on:
