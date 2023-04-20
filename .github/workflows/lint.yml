@@ -1,6 +1,9 @@
 name: "Lint nix flakes on Ubuntu latest"
 on:
   pull_request:
+    branches:
+      - main
+      - dev
   push:
 jobs:
   tests:
