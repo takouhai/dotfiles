@@ -1,5 +1,15 @@
 # audio 
 
-| program | purpose |
+## players
+
+| program | description |
 | --- | --- |
-| lmms | fl studio for open source nerds | 
+| spotify | linux native spotify player | 
+| tidal-hifi | chromium wrapper for tidal web player | 
+
+## editors
+
+| program | description |
+| --- | --- |
+| lmms | fl studio for open source nerds |
+
