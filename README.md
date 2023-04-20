@@ -6,7 +6,7 @@ it's grrrreat! [^1]
 [![macos compatible](https://img.shields.io/static/v1?logo=Apple&logoColor=000000&label=macOS&labelColor=ffffff&message=compatible&color=gray&style=for-the-badge)](https://github.com/LnL7/nix-darwin)
 [![kde compatible](https://img.shields.io/static/v1?logo=KDE&logoColor=1D99F3&label=KDE&labelColor=ffffff&message=compatible&color=gray&style=for-the-badge)](https://github.com/LnL7/nix-darwin)
 [![nixos - basically black magic](https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=NixOS&labelColor=5e81ac&message=basically%20black%20magic&color=d8dee9&style=for-the-badge)](https://nixos.org)
-[![made with - out pants](https://img.shields.io/static/v1?label=Made%20with&message=out%20pants&color=red&style=for-the-badge)](#)
+[![made with - out pants](https://img.shields.io/static/v1?label=Made%20with&message=out%20pants&color=red&style=for-the-badge)](https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs)
 
 > this whole repository is a work in progress and may change at any time.
 > be ye warned!
@@ -19,7 +19,7 @@ i made a nix configuration to manage my life.
 nix is pretty crazy, [you should check it out!](https://nixos.org/learn.html)
 declarative stuff is definitely the future.
 
-it's way easier to throw these up on github and just pull
+it's way easier to throw these up on GitHub and just pull
 them down whenever i need them, so have them for free!
 you're welcome. i know. i'm too kind.
 
@@ -67,22 +67,22 @@ you should probably [install nix or have nixos installed already](https://nixos.
 
 ### linux
 
-```
-$ sh <(curl -L https://nixos.org/nix/install) --daemon
+```bash
+sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
 we install it as a daemon because daemons never stop.[^2]
 
-### macos
+### macOS
 
-```
-$ sh <(curl -L https://nixos.org/nix/install)
+```bash
+sh <(curl -L https://nixos.org/nix/install)
 ```
 
 from there, i clone this repository into my `~/.dotfiles` directory.
 
-```
-$ git clone git@github.com:takouhai/dotfiles.git ~/.dotfiles
+```bash
+git clone git@github.com:takouhai/dotfiles.git ~/.dotfiles
 ```
 
 after that, i run the update commands below in a shell with those commands available.
@@ -91,8 +91,8 @@ usually i'm on a host with nix, so popping open a nix shell with the appropriate
 is enough to get me off the ground, home/shell-wise.
 you can find out how to enable flakes on your system/nix configuration [here](https://nixos.wiki/wiki/Flakes#Enable_flakes).
 
-```
-$ nix shell nixpkgs#home-manager
+```bash
+nix shell nixpkgs#home-manager
 ```
 
 ## update
@@ -101,14 +101,14 @@ once you start, you can't stop! seriously, help me.
 
 ### home
 
-```
-$ home-manager switch --flake .#taco
+```bash
+home-manager switch --flake .#taco
 ```
 
 ### nixos
 
-```
-$ sudo nixos-rebuild switch --flake .#
+```bash
+sudo nixos-rebuild switch --flake .#
 ```
 
 should get you to the mountain, rock and roll.[^4]
@@ -119,14 +119,12 @@ the zsh shell has some provided shortcuts to update the current setup as you're 
 you can use `updateHome` and `updateNix` to automatically reload based on the config.
 you're really just running the above commands through these shortcuts, though.
 
+```bash
+updateHome
+updateNix
+updateChannel
+updateAll
 ```
-$ updateHome
-$ updateNix
-$ updateChannel
-$ updateAll
-```
-
-etc.
 
 take a look at [the source code](packages/zsh/default.nix) to see what's happening.
 
