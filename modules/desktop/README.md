@@ -8,3 +8,4 @@ i use kde on most of my machines and hyprland on my laptop.
 | --- | --- |
 | plasma | the kde desktop environment. |
 | hyprland | a wayland-based tiling desktop environment. |
+

@@ -5,4 +5,5 @@ anything that is playable goes here.
 
 | program | description |
 | --- | --- |
-| steam | proprietary game marketplace and launcher | 
+| steam | proprietary game marketplace and launcher |
+
