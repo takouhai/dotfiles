@@ -35,7 +35,7 @@ hardcoded into my shell.
 | kitty    | a cross-platform gpu-powered terminal emulator, written in python.               |
 | lsd      | a deluxe ls command, written in rust.                                            |
 | neofetch | a system information tool, written in bash.                                      |
-| neovim   | a backwards compatible vim alternative, written in c.                            |
+| neovim   | a backward compatible vim alternative, written in c.                             |
 | thefuck  | an app that corrects errors in previous console commands, written in python.     |
 | tldr     | collaborative cheatsheets for console commands, written in markdown/bash/python. |
 | xplr     | a minimal, fast tui file explorer, written in rust.                              |
