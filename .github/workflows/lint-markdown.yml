@@ -1,0 +1,16 @@
+name: "Lint markdown files on Ubuntu latest"
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+  push:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v20
+      with:
+        github_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    - run: nix shell nixpkgs#nodePackages_latest.markdownlint-cli -c mdl $(find . -type f -name "*.md")
