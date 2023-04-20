@@ -1,3 +1,4 @@
+---
 name: "Build myna flavor of NixOS on Ubuntu latest"
 
 on:
