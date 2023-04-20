@@ -7,6 +7,8 @@
       TERMINAL = "kitty";
       VISUAL = "nvim";
       EDITOR = "nvim";
+      
+      configDir = "$HOME/.dotfiles";
     };
 
     shellAliases = {
