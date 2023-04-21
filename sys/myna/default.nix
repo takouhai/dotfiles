@@ -6,12 +6,13 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/system/boot
-    ../../modules/system/audio
-    ../../modules/system/network
-    ../../modules/system/locale
-    ../../modules/system/drivers/nvidia
     ../../modules/desktop/plasma
+    ../../modules/system/audio
+    ../../modules/system/boot
+    ../../modules/system/drivers/nvidia
+    ../../modules/system/locale
+    ../../modules/system/network
+    ../../modules/system/printing
   ];
 
   # modules
@@ -29,9 +30,6 @@
     nvidiaBusId = "PCI:1:0:0";
     intelBusId = "PCI:0:2:0";
   };
-
-  # printing [cups]
-  services.printing.enable = true;
 
   programs.zsh.enable = true;
 
@@ -67,7 +65,6 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
 
   services.pcscd.enable = true;
   programs.gnupg.agent = {

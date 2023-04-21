@@ -6,11 +6,14 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/desktop/plasma
+    ../../modules/system/audio
     ../../modules/system/boot
+    ../../modules/system/drivers/amd
     ../../modules/system/network
     ../../modules/system/locale
+    ../../modules/system/printing
   ];
-
 
   # filesystem [luks]
   boot.initrd.luks.devices."luks-8d53a19b-7ed1-49db-a081-18bb15dfea9f".device = "/dev/disk/by-uuid/8d53a19b-7ed1-49db-a081-18bb15dfea9f";
@@ -18,34 +21,6 @@
 
   # networking
   networking.hostName = "fishcrow";
-
-  # display [x11]
-  services.xserver.enable = true;
-
-  # display [kde]
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # keymap [x11]
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
-  # printing [cups]
-  services.printing.enable = true;
-  services.printing.drivers = [pkgs.cnijfilter2];
-
-  # sound [pipewire]
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   programs.zsh.enable = true;
 
@@ -79,24 +54,6 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  # packages [system]
-  environment.systemPackages = with pkgs; [
-    # kde system utils
-    aha
-    fwupd
-    glxinfo
-    pciutils
-    qt6.full
-    virtualgl
-    vulkan-tools
-    wayland-utils
-    xorg.xdpyinfo
-    kate
-
-    # tiling for kde
-    libsForQt5.bismuth
-  ];
 
   services.pcscd.enable = true;
   programs.gnupg.agent = {
