@@ -31,7 +31,6 @@
     home-manager,
     nur,
     nixgl,
-    hyprland,
     plasma-manager,
     ...
   }: let
@@ -50,7 +49,6 @@
       fishcrow = lib.nixosSystem {
         modules = [
           ./sys/fishcrow
-          hyprland.nixosModules.default
           nur.nixosModules.nur
         ];
       };
