@@ -6,11 +6,6 @@
 }: {
   services = {
     xserver = {
-      layout = "us";
-      xkbVariant = "";
-      displayManager = {
-        lightdm.enable = true;
-      };
       desktopManager = {
         plasma5.enable = true;
       };

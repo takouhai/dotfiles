@@ -43,7 +43,7 @@ home configuration, powered by home-manager.
 
 ### [sys](sys/)
 
-my linux host configurations, powered by nixos and nix-darwin.
+my linux host configurations, powered by nixos.
 
 ### [modules](modules/)
 
@@ -60,6 +60,12 @@ what makes this all happen, powered by nix flakes!
 ### [archive](archive/)
 
 the graveyard, powered by the neverending approach of time.
+
+> don't get me wrong, i like you checking out my stuff.
+> but these instructions are mainly for me to install on my own machines.
+> these aren't guaranteed to work on your machine at all.
+> you can use then for reference, but don't expect them to work
+> out of the box on your laptop/desktop/toaster.
 
 ## install
 
@@ -107,13 +113,23 @@ home-manager switch --flake .#taco
 
 ### nixos
 
+nixos should pick up the hostname automatically,
+so you can usually just run
+
 ```bash
 sudo nixos-rebuild switch --flake .#
 ```
 
-should get you to the mountain, rock and roll.[^4]
+and that should get you to the mountain, rock and roll.[^4]
 these re-build the appropriate setup based on what your inputted according to what the flake evaluates to
 and switches your home environment/operating system to it if it compiles successfully.
+
+if you want to manually compile a specific host, you can specify
+
+```bash
+sudo nixos-rebuild build --flake .#fishcrow
+sudo nixos-rebuild build --flake .#myna
+```
 
 the zsh shell has some provided shortcuts to update the current setup as you're using it.
 you can use `updateHome` and `updateNix` to automatically reload based on the config.

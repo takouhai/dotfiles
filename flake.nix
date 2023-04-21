@@ -18,11 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:vaxerski/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     plasma-manager = {
       url = "github:pjones/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,7 +31,6 @@
     home-manager,
     nur,
     nixgl,
-    hyprland,
     plasma-manager,
     ...
   }: let
@@ -44,7 +38,6 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     lib = nixpkgs.lib;
-    plasma-manager = plasma-manager;
   in {
     nixosConfigurations = {
       myna = lib.nixosSystem {
@@ -56,12 +49,11 @@
       fishcrow = lib.nixosSystem {
         modules = [
           ./sys/fishcrow
-          hyprland.nixosModules.default
           nur.nixosModules.nur
         ];
       };
     };
-    homeConfigurations.taco = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
       modules = [
