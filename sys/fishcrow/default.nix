@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules/audio
+    ../../modules/desktop/displaymanager
     ../../modules/desktop/plasma
     ../../modules/development
     ../../modules/office
