@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  user,
   ...
 }: {
   imports = [
@@ -13,6 +14,7 @@
     ../../modules/system/network
     ../../modules/system/locale
     ../../modules/system/printing
+    ../../modules/audio
   ];
 
   # filesystem [luks]
@@ -22,10 +24,8 @@
   # networking
   networking.hostName = "fishcrow";
 
-  programs.zsh.enable = true;
-
   # users
-  users.users.taco = {
+  users.users. = {
     isNormalUser = true;
     description = "taco";
     shell = pkgs.zsh;
