@@ -18,5 +18,5 @@ jobs:
     - uses: cachix/install-nix-action@v20
       with:
         github_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - run: nix shell nixpkgs#alejandra -c alejandra "$(find . -name \"**/*.nix\")"
+    - run: "nix shell nixpkgs#alejandra -c alejandra **/*.nix"
       shell: zsh {0}
