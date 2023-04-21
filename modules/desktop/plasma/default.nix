@@ -1,7 +1,11 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   services = {
     xserver = {
-      enable = true;
       layout = "us";
       xkbVariant = "";
       displayManager = {

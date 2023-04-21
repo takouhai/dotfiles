@@ -1,8 +1,11 @@
-{ config, pkgs, lib, ... }: 
-let
-  locale = "en_US.UTF-8";
-in
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  locale = "en_US.UTF-8";
+in {
   time.timeZone = "America/New_York";
   i18n = {
     defaultLocale = locale;
