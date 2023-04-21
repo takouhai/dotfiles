@@ -5,40 +5,19 @@
   ...
 }: {
   imports = [
-    # hardware configuration [install]
     ./hardware-configuration.nix
+    ../../modules/system/boot
+    ../../modules/system/network
+    ../../modules/system/locale
   ];
 
-  # bootloader [systemd-boot]
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # filesystem [luks]
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
   boot.initrd.luks.devices."luks-8d53a19b-7ed1-49db-a081-18bb15dfea9f".device = "/dev/disk/by-uuid/8d53a19b-7ed1-49db-a081-18bb15dfea9f";
   boot.initrd.luks.devices."luks-8d53a19b-7ed1-49db-a081-18bb15dfea9f".keyFile = "/crypto_keyfile.bin";
 
   # networking
   networking.hostName = "fishcrow";
-  networking.networkmanager.enable = true;
-
-  # locale
-  time.timeZone = "America/New_York";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
 
   # display [x11]
   services.xserver.enable = true;
