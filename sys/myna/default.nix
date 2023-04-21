@@ -18,7 +18,7 @@
     ../../modules/system/locale
     ../../modules/system/network
     ../../modules/system/printing
-    ../../modules/user
+    ../../modules/users
     ../../modules/utility
     ../../modules/video
     ./hardware-configuration.nix
@@ -39,21 +39,6 @@
     nvidiaBusId = "PCI:1:0:0";
     intelBusId = "PCI:0:2:0";
   };
-
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [zsh];
-
-  # users
-  users.users.taco = {
-    isNormalUser = true;
-    description = "taco";
-    extraGroups = ["networkmanager" "wheel"];
-  };
-
-  nixpkgs.config.allowUnfree = true;
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.pcscd.enable = true;
   programs.gnupg.agent = {

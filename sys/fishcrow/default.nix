@@ -2,19 +2,25 @@
   config,
   pkgs,
   lib,
-  user,
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
+    ../../modules/audio
     ../../modules/desktop/plasma
+    ../../modules/development
+    ../../modules/office
+    ../../modules/shell
+    ../../modules/system
     ../../modules/system/audio
     ../../modules/system/boot
     ../../modules/system/drivers/amd
-    ../../modules/system/network
     ../../modules/system/locale
+    ../../modules/system/network
     ../../modules/system/printing
-    ../../modules/audio
+    ../../modules/users
+    ../../modules/utility
+    ../../modules/video
+    ./hardware-configuration.nix
   ];
 
   # filesystem [luks]
@@ -23,37 +29,6 @@
 
   # networking
   networking.hostName = "fishcrow";
-
-  # users
-  users.users. = {
-    isNormalUser = true;
-    description = "taco";
-    shell = pkgs.zsh;
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      # web browsers
-      firefox
-      ungoogled-chromium
-      brave
-      librewolf
-      tor-browser-bundle-bin
-      # comms
-      tdesktop
-      discord
-      # media
-      spotify
-      tidal-hifi
-      jellyfin-media-player
-      # office
-      logseq
-      figma-linux
-      qflipper
-    ];
-  };
-
-  nixpkgs.config.allowUnfree = true;
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.pcscd.enable = true;
   programs.gnupg.agent = {
@@ -65,12 +40,6 @@
   fonts.fonts = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-  };
 
   # version [nixos]
   system.stateVersion = "22.11";
