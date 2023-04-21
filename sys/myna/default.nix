@@ -84,7 +84,7 @@
   };
 
   # version [nixos]
-  system.stateVersion = "unstable";
+  system.stateVersion = "22.11";
 
   nix.extraOptions = ''
     keep-outputs = true
