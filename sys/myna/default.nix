@@ -5,14 +5,25 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
+    ../../modules/audio
+    ../../modules/desktop/displaymanager
     ../../modules/desktop/plasma
+    ../../modules/development
+    ../../modules/games
+    ../../modules/office
+    ../../modules/shell
+    ../../modules/system
     ../../modules/system/audio
     ../../modules/system/boot
     ../../modules/system/drivers/nvidia
     ../../modules/system/locale
     ../../modules/system/network
     ../../modules/system/printing
+    ../../modules/users
+    ../../modules/utility
+    ../../modules/video/editors
+    ../../modules/video/players
+    ./hardware-configuration.nix
   ];
 
   # modules
@@ -31,41 +42,6 @@
     intelBusId = "PCI:0:2:0";
   };
 
-  programs.zsh.enable = true;
-
-  # users
-  users.users.taco = {
-    isNormalUser = true;
-    description = "taco";
-    shell = pkgs.zsh;
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      # web browsers
-      firefox
-      ungoogled-chromium
-      brave
-      librewolf
-      tor-browser-bundle-bin
-      # comms
-      tdesktop
-      discord
-      # media
-      spotify
-      tidal-hifi
-      jellyfin-media-player
-      # office
-      logseq
-      figma-linux
-      qflipper
-      steam
-      speedcrunch
-    ];
-  };
-
-  nixpkgs.config.allowUnfree = true;
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
   services.pcscd.enable = true;
   programs.gnupg.agent = {
     enable = true;
@@ -76,12 +52,6 @@
   fonts.fonts = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-  };
 
   # version [nixos]
   system.stateVersion = "22.11";
