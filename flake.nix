@@ -44,7 +44,6 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     lib = nixpkgs.lib;
-    plasma-manager = plasma-manager;
   in {
     nixosConfigurations = {
       myna = lib.nixosSystem {
@@ -61,7 +60,7 @@
         ];
       };
     };
-    homeConfigurations.taco = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
       modules = [

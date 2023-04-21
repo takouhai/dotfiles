@@ -20,6 +20,6 @@ in {
   };
 
   imports = [
-    ../modules/shell
+    ./packages
   ];
 }
