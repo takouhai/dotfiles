@@ -1,8 +1,7 @@
 {pkgs, ...}: {
   users.users.taco.packages = with pkgs; [
-    lapce
-    neovide
-    kitty
-    alacritty
+    jellyfin-media-player
+    mpv
+    vlc
   ];
 }

@@ -11,6 +11,9 @@
       # note taking
       logseq
 
+      # office suite
+      libreoffice
+
       # calculator
       speedcrunch
 

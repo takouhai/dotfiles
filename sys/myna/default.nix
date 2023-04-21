@@ -20,7 +20,8 @@
     ../../modules/system/printing
     ../../modules/users
     ../../modules/utility
-    ../../modules/video
+    ../../modules/video/editors
+    ../../modules/video/players
     ./hardware-configuration.nix
   ];
 
