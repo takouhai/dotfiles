@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "VictorMono";
+      name = "VictorMono Nerd Font";
       size = 14;
       package = pkgs.nerdfonts.override {fonts = ["VictorMono"];};
     };
