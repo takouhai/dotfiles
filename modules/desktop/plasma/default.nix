@@ -21,6 +21,7 @@
     wayland-utils
     xorg.xdpyinfo
     kate
+    partition-manager
 
     layan-kde
     papirus-icon-theme
