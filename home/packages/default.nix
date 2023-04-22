@@ -32,6 +32,7 @@
     alejandra
   ];
   easterEggs = with pkgs; [
+    oneko
     asciiquarium
   ];
 in {
