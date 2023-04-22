@@ -14,10 +14,10 @@
     gping
     httpie
     jq
-    kitty
     lsd
     neofetch
     pls
+    starship
     thefuck
     tldr
     xplr
@@ -39,8 +39,6 @@ in {
     []
     ++ unixTools
     ++ gitFlow
-    ++ nixTools
-    ++ easterEggs;
-
+    ++ nixTools ++ easterEggs;
   imports = import ../config;
 }

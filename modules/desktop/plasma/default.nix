@@ -22,6 +22,9 @@
     xorg.xdpyinfo
     kate
 
+    layan-kde
+    papirus-icon-theme
+
     libsForQt5.bismuth
     libsForQt5.kpmcore
   ];

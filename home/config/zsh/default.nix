@@ -16,7 +16,7 @@
       pushStack = "pushd $configDir";
       popStack = "popd $configDir";
 
-      rebuildNix = "please nixos-rebuild switch --flake .#";
+      rebuildNixos = "please nixos-rebuild switch --flake .#";
       rebuildHome = "home-manager switch --flake .#taco";
 
       sourceZshrc = "source $HOME/.zshrc";
@@ -24,8 +24,9 @@
 
       updateChannel = "nix-channel --update";
       updateFlake = "nix flake update";
+
       updateHome = "pushStack && rebuildHome && popStack && sourceZshrc";
-      updateNix = "pushStack && rebuildNix && popStack";
+      updateNixos = "pushStack && rebuildNixos && popStack";
 
       updateAll = "updateChannel && updateFlake && updateNix && updateHome";
 
@@ -34,6 +35,9 @@
       cat = "bat";
       ls = "lsd";
     };
+
+    initExtra = "eval \"$(starship init zsh)\"";
+
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "rvm" "rust" "python" "thefuck" "zoxide" "volta"];
