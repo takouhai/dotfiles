@@ -19,6 +19,7 @@
     ../../modules/system/locale
     ../../modules/system/network
     ../../modules/system/printing
+    ../../modules/system/fonts
     ../../modules/users
     ../../modules/utility
     ../../modules/video/editors
@@ -48,10 +49,6 @@
     pinentryFlavor = "curses";
     enableSSHSupport = true;
   };
-
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
-  ];
 
   # version [nixos]
   system.stateVersion = "22.11";

@@ -14,10 +14,10 @@
     gping
     httpie
     jq
-    kitty
     lsd
     neofetch
     pls
+    starship
     thefuck
     tldr
     xplr
@@ -32,6 +32,7 @@
     alejandra
   ];
   easterEggs = with pkgs; [
+    oneko
     asciiquarium
   ];
 in {
@@ -41,6 +42,5 @@ in {
     ++ gitFlow
     ++ nixTools
     ++ easterEggs;
-
   imports = import ../config;
 }
