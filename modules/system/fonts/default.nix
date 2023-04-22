@@ -8,6 +8,6 @@
     noto-fonts
     noto-fonts-emoji
     cabin
-    (nerdfonts.override {fonts = ["JetBrainsMono" "VictorMono" "Iosevka"];})
+    (nerdfonts.override {fonts = ["JetBrainsMono" "VictorMono"];})
   ];
 }
