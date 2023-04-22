@@ -6,10 +6,8 @@
 }: {
   fonts.fonts = with pkgs; [
     noto-fonts
-    noto-fonts-extra
-    noto-fonts-emoji-blob-bin
+    noto-fonts-emoji
     cabin
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    (nerdfonts.override { fonts = [ "VictorMono" ]; })
+    (nerdfonts.override {fonts = ["JetBrainsMono" "VictorMono" "Iosevka"];})
   ];
 }

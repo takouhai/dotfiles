@@ -39,6 +39,7 @@ in {
     []
     ++ unixTools
     ++ gitFlow
-    ++ nixTools ++ easterEggs;
+    ++ nixTools
+    ++ easterEggs;
   imports = import ../config;
 }

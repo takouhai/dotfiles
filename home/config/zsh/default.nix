@@ -28,7 +28,7 @@
       updateHome = "pushStack && rebuildHome && popStack && sourceZshrc";
       updateNixos = "pushStack && rebuildNixos && popStack";
 
-      updateAll = "updateChannel && updateFlake && updateNix && updateHome";
+      updateAll = "pushStack && updateChannel && updateFlake && updateNixos && updateHome && popStack";
 
       editHome = "$EDITOR $configDir";
 
