@@ -9,7 +9,6 @@
     noto-fonts-extra
     noto-fonts-emoji-blob-bin
     cabin
-    victor-mono
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     (nerdfonts.override { fonts = [ "VictorMono" ]; })
   ];
