@@ -63,6 +63,7 @@
 
       modules = [
         ./home
+        hyprland.homeManagerModules.default
       ];
     };
   };
