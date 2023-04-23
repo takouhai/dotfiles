@@ -8,9 +8,8 @@
     layout = "us";
     xkbVariant = "";
     displayManager = {
-      lightdm = {
+      sddm = {
         enable = true;
-        greeters.gtk.enable = true;
       };
     };
   };

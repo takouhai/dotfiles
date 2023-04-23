@@ -8,6 +8,7 @@
     ../../modules/audio
     ../../modules/desktop/displaymanager
     ../../modules/desktop/plasma
+    ../../modules/desktop/hyprland
     ../../modules/development
     ../../modules/games
     ../../modules/office

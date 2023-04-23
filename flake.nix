@@ -18,6 +18,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland.url = "github:hyprwm/Hyprland/2df0d034bc4a18fafb3524401eeeceaa6b23e753";
+
     plasma-manager = {
       url = "github:pjones/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,12 +28,13 @@
   };
 
   outputs = inputs @ {
-    self,
-    nixpkgs,
     home-manager,
-    nur,
+    hyprland,
     nixgl,
+    nixpkgs,
+    nur,
     plasma-manager,
+    self,
     ...
   }: let
     user = "taco";
@@ -44,12 +47,14 @@
         modules = [
           ./sys/myna
           nur.nixosModules.nur
+          hyprland.nixosModules.default
         ];
       };
       fishcrow = lib.nixosSystem {
         modules = [
           ./sys/fishcrow
           nur.nixosModules.nur
+          hyprland.nixosModules.default
         ];
       };
     };
