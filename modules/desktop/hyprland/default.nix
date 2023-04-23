@@ -13,7 +13,10 @@
     layan-gtk-theme
     papirus-icon-theme
     swaybg
-    wofi
+    rofi-wayland
     libsForQt5.polkit-kde-agent
-  ]; 
+  ];
+  #imports = [
+  #  ./nwg-look.nix
+  #];
 }

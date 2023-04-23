@@ -14,12 +14,12 @@
     shellAliases = {
       please = "sudo";
 
-      # push the stack so it's always available when we run the commands 
+      # push the stack so it's always available when we run the commands
       pushStack = "pushd $configDir";
       # pop it so it's not there when we're done
-      popStack = "popd";
+      popStack = "popd $configDir";
 
-      # rebuild the system based on the flake 
+      # rebuild the system based on the flake
       # first one autodetects your host
       rebuildNixos = "please nixos-rebuild switch --flake .#";
       # others explicitly call for a host defined in the flake
