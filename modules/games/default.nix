@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  users.users.taco.packages = with pkgs; [
-    steam
-  ];
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+  };
 }
