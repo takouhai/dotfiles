@@ -10,6 +10,5 @@
     dolphin
     wofi
     waybar
-    nwg-look
   ]; 
 }
