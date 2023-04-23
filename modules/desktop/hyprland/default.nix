@@ -10,8 +10,9 @@
     dunst
     eww-wayland
     glib
-    wofi
     layan-gtk-theme
     papirus-icon-theme
+    swaybg
+    wofi
   ]; 
 }
