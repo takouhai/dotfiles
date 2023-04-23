@@ -6,9 +6,12 @@
 }: {
   programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
-    dunst
     dolphin
+    dunst
+    eww-wayland
+    glib
     wofi
-    waybar
+    layan-gtk-theme
+    papirus-icon-theme
   ]; 
 }

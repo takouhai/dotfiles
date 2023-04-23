@@ -20,6 +20,8 @@
 
     hyprland.url = "github:hyprwm/Hyprland/2df0d034bc4a18fafb3524401eeeceaa6b23e753";
 
+    nix-alien.url = "github:thiagokokada/nix-alien";
+
     plasma-manager = {
       url = "github:pjones/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +32,7 @@
   outputs = inputs @ {
     home-manager,
     hyprland,
+    nix-alien,
     nixgl,
     nixpkgs,
     nur,
