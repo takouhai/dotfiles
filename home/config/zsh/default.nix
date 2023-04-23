@@ -39,8 +39,11 @@
       # update your flake (updates the flake.lock)
       updateFlake = "nix flake update";
 
+      # get the files we need, rebuild home, pop the stack, and update zsh
       updateHome = "pushStack && rebuildHome && popStack && updateZshrc";
+      # get the stack, rebuild nixos, and pop the stack
       updateNixos = "pushStack && rebuildNixos && popStack";
+      # imagine if updateNixos and updateHome had a baby
       updateSystem = "pushStack && rebuildNixos && rebuildHome && popStack && cd $configDir";
       updateAll = "pushStack && updateChannel && updateFlake && rebuildNixos && rebuildHome && popStack";
 
