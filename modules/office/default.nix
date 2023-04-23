@@ -20,6 +20,7 @@
       # comms
       tdesktop
       discord
+      webcord
 
       # visual editing
       figma-linux
