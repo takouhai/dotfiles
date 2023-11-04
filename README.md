@@ -37,21 +37,9 @@ your thoughts and opinions are welcome!
 
 here's what this repository currently holds:
 
-### [home](home/)
+### [home](home.nix)
 
 home configuration, powered by home-manager.
-
-### [sys](sys/)
-
-my linux host configurations, powered by nixos.
-
-### [modules](modules/)
-
-bundles of packages for nixos, powered by my terrible nix scripts.
-
-### [packages](packages/)
-
-packages for nix, powered by nixpkgs and nixos.
 
 ### [flake.nix](flake.nix)
 
