@@ -6,12 +6,38 @@
 
   home.stateVersion = "23.05"; 
 
-  home.packages = [
-    pkgs.alejandra
-    pkgs.shellcheck
-    pkgs.starship
-    pkgs.zoxide
-    (pkgs.nerdfonts.override { fonts = [ "iA-Writer" ]; })
+  home.packages = with pkgs; [
+    alejandra
+    asciiquarium
+    bat
+    broot
+    btop
+    delta
+    dog
+    du-dust
+    duf
+    eza
+    fastfetch
+    fzf
+    glances
+    gping
+    hexyl
+    httpie
+    hyperfine
+    jq
+    lsd
+    neofetch
+    nnn
+    onefetch
+    oneko
+    pls
+    ripgrep
+    shellcheck
+    tldr
+    tmatrix
+    xplr
+    xsv
+    zoxide
   ];
 
   home.file = {

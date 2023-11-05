@@ -1,5 +1,5 @@
 {
-  description = "taco's super cool awesome frosted flake configuration ";
+  description = "taco's super cool awesome frosted flake configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
