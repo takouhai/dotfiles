@@ -99,25 +99,7 @@ once you start, you can't stop! seriously, help me.
 home-manager switch --flake .#taco
 ```
 
-### nixos
-
-nixos should pick up the hostname automatically,
-so you can usually just run
-
-```bash
-sudo nixos-rebuild switch --flake .#
-```
-
-and that should get you to the mountain, rock and roll.[^4]
-these re-build the appropriate setup based on what your inputted according to what the flake evaluates to
-and switches your home environment/operating system to it if it compiles successfully.
-
-if you want to manually compile a specific host, you can specify
-
-```bash
-sudo nixos-rebuild build --flake .#fishcrow
-sudo nixos-rebuild build --flake .#myna
-```
+that should get you to the mountain, rock and roll.[^4]
 
 the zsh shell has some provided shortcuts to update the current setup as you're using it.
 you can use `updateHome` and `updateNix` to automatically reload based on the config.
@@ -125,7 +107,6 @@ you're really just running the above commands through these shortcuts, though.
 
 ```bash
 updateHome
-updateNix
 updateChannel
 updateAll
 ```

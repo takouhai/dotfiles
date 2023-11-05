@@ -1,39 +1,21 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "taco";
   home.homeDirectory = "/home/taco";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "23.05"; # Please read the comment before changing.
+  home.stateVersion = "23.05"; 
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = [
+    pkgs.alejandra
     pkgs.shellcheck
+    pkgs.starship
+    pkgs.zoxide
+    (pkgs.nerdfonts.override { fonts = [ "iA-Writer" ]; })
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
+    # TODO: add non-nix manageable dotfiles
   };
 
   home.sessionVariables = {
@@ -42,9 +24,34 @@
 
   programs.zsh = {
     enable = true;
+    shellAliases = {
+      please = "sudo";
+
+      # change the dir so it's always available when we run the commands
+      changeDir = "currentDir=$(pwd);cd ~/.dotfiles";
+      revertDir = "cd $currentDir";
+
+      # rebuild my home configuration, managed by home-manager
+      rebuildHome = "home-manager switch --flake .#taco";
+
+      # update zshrc because i use zsh
+      sourceZshrc = "source $HOME/.zshrc";
+      # i keep typing this instead so add a shortcut for it
+      updateZshrc = "sourceZshrc";
+
+      # update nix channels (imagine an apt update for nix)
+      updateChannel = "nix-channel --update";
+      # update your flake (updates the flake.lock)
+      updateFlake = "nix flake update";
+
+      # get the files we need, rebuild home, pop the stack, and update zsh
+      updateHome = "changeDir && rebuildHome && updateZshrc && revertDir";
+
+      updateAll = "changeDir && updateChannel && updateFlake && updateHome && revertDir";
+    };
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "thefuck"];
+      plugins = ["git" "thefuck" "volta" "rust" "rvm" "zoxide"];
       theme = "bureau";
     };
   };
