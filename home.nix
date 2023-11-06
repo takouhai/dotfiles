@@ -12,6 +12,7 @@
     bat
     broot
     btop
+    byobu
     delta
     dog
     du-dust
@@ -25,6 +26,7 @@
     httpie
     hyperfine
     jq
+    lazygit
     lsd
     neofetch
     nnn
@@ -33,6 +35,7 @@
     pls
     ripgrep
     shellcheck
+    thefuck
     tldr
     tmatrix
     xplr
