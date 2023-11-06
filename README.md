@@ -2,10 +2,7 @@
 
 it's grrrreat! [^1]
 
-[![nixos compatible](https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=NixOS&labelColor=5e81ac&message=compatible&color=gray&style=for-the-badge)](https://nixos.org)
-[![macos compatible](https://img.shields.io/static/v1?logo=Apple&logoColor=000000&label=macOS&labelColor=ffffff&message=compatible&color=gray&style=for-the-badge)](https://github.com/LnL7/nix-darwin)
-[![kde compatible](https://img.shields.io/static/v1?logo=KDE&logoColor=1D99F3&label=KDE&labelColor=ffffff&message=compatible&color=gray&style=for-the-badge)](https://github.com/LnL7/nix-darwin)
-[![nixos - basically black magic](https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=NixOS&labelColor=5e81ac&message=basically%20black%20magic&color=d8dee9&style=for-the-badge)](https://nixos.org)
+[![nix - basically black magic](https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=Nix(OS)&labelColor=5e81ac&message=basically%20black%20magic&color=d8dee9&style=for-the-badge)](https://nixos.org)
 [![made with - out pants](https://img.shields.io/static/v1?label=Made%20with&message=out%20pants&color=red&style=for-the-badge)](https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs)
 
 > this whole repository is a work in progress and may change at any time.
