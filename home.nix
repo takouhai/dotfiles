@@ -13,6 +13,7 @@
     broot
     btop
     byobu
+    curlie
     delta
     dog
     du-dust
@@ -32,9 +33,12 @@
     nnn
     onefetch
     oneko
+    pinentry-curses
     pls
     ripgrep
+    rustup
     shellcheck
+    sl
     thefuck
     tldr
     tmatrix
@@ -49,10 +53,12 @@
 
   home.sessionVariables = {
     EDITOR = "nvim --clean";
+    VISUAL = "nvim --clean";
   };
 
   programs.zsh = {
     enable = true;
+
     shellAliases = {
       please = "sudo";
 
@@ -77,12 +83,38 @@
       updateHome = "changeDir && rebuildHome && updateZshrc && revertDir";
 
       updateAll = "changeDir && updateChannel && updateFlake && updateHome && revertDir";
+
+      updateShell = "updateAll";
+
+      secretAgentMan = "echo \"THEY'VE GIVEN YOU A NUMBER\" && eval `ssh-agent -s` ssh-add && echo \"AND TAKEN AWAY YOUR NAME\"";
+      sshAgentMan = "secretAgentMan";
     };
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "thefuck" "volta" "rust" "rvm" "zoxide"];
       theme = "bureau";
     };
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Daniel Alejandro Gallegos";
+    userEmail = "daniel@tacowolf.net";
+  };
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      theme_background = false;
+      update_ms = 666;
+      vim_keys = true;
+    };
+  };
+
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    vimdiffAlias = true;
   };
 
   programs.home-manager.enable = true;
